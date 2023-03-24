@@ -1,0 +1,18 @@
+/* Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de
+atribuição são ilegais? */
+
+#include <iostream>
+int main() {
+    int i = 3, j = 4;
+    int *p;
+    int *q;
+    p = i; //Ponteiro só armazena o endereco, nao a variavel
+    q = &j; //OK
+    p = &*&i; //OK
+    i = (*&)j; //Erro de escrita (c++ nao permite) em ")j", a nao ser que use assim "(*&j)"
+    i = *&j; //OK
+    i = *&*&j; //OK
+    q = *p; //OK
+    i = (*p)++ + *q; //OK
+    return 0;
+}
