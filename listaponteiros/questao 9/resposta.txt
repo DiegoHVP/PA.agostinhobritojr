@@ -1,0 +1,31 @@
+Seja x um vetor de 4 elementos, declarado da forma TIPO x[4];. Suponha que depois da
+declaração, x esteja armazenado no endereço de memória 4092 (ou seja, o endereço de x[0]).
+Suponha também que na máquina seja usada uma variável do tipo char ocupa 1 byte, do tipo
+int ocupa 2 bytes, do tipo float ocupa 4 bytes e do tipo double ocupa 8 bytes. Quais serão os
+valores de x+1, x+2 e x+3 se:
+
+◦ x for declarado como char?
+Então cada posicao do vetor x sera ocupada por 1bytes
+x+1 vai ocupar 4093
+x+2 vai ocupar 4094
+x+3 vai ocupar 4095
+
+
+◦ x for declarado como int?
+Então cada posicao do vetor x sera ocupada por 2bytes
+x+1 vai ocupar 4094
+x+2 vai ocupar 4096
+x+3 vai ocupar 4098
+
+
+◦ x for declarado como float?
+Então cada posicao do vetor x sera ocupada por 4bytes
+x+1 vai ocupar 4096
+x+2 vai ocupar 409A
+x+3 vai ocupar 409E
+
+
+◦ x for declarado como double?
+x+1 vai ocupar 409A
+x+2 vai ocupar 40A2
+x+2 vai ocupar 40AA
