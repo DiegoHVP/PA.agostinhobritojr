@@ -1,0 +1,6 @@
+/*Assumindo que pulo[] é um vetor do tipo int, quais das seguintes expressões referenciam o valor do terceiro elemento do vetor? */
+
+*(pulo + 2); //REFERENCIA O 3° VALOR DE pulo[]
+*(pulo + 4);
+pulo + 4;
+pulo + 2; //REFERENCIA O ENDERECO DO 3° VALOR DE pulo[]
