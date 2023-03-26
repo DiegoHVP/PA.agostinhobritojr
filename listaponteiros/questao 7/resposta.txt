@@ -1,0 +1,11 @@
+/*Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas?
+Justifique.*/
+
+    p = (mat + 1); //P APONTA O PROXIMO VALOR DE mat[0] NO CASO mat[1]
+    p = mat++; //OPERADOR DE INCREMENTO NAO PODE SER USADO
+    p = ++mat; //OPERADOR DE INCREMENTO NAO PODE SER USADO
+    /*
+	PENSO QUE O OPERADOR DE INCREMENTO SO TRABALHE COM VALORES INT/FLOAT, E NAO OPERE COM MEMORIA.
+    */
+    x = (*mat)++; //ARMAZENA O 1°VALOR DE mat DEPOIS INCREMENTA
+    /*COMO ESTA SENDO ACESSADO O CONTEUDO DE mat O OPERADO DE INCREMENTO FUNCIONA

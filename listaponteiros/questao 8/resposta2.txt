@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+    printf("%p ",vet+i);
+    /*
+    vet ESTA INDO PARA O ENDERECO DE MEMORIA DE vet, SOMANDO i ELE VAI ACESSAR OS ENDERECOS DE MEMORIA SEGUINTES. COMO ESTAMOS USANDO %X O ENDERECO SERA EXIBIDO EM HEXADECIMAL
+    */
+  }
+}

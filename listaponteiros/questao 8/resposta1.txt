@@ -1,0 +1,13 @@
+#include <iostream> //SEM O PACOTE DE ENTRADA E SAIDA NADA, POIS NAO TEM A FUNCAO printf
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+    printf("%d ",*(vet+i));
+    /*
+    *(vet+i) PEGA O CONTEUDO DE vet NA SUA POSICAO INICIAL, COM A SOMA DO CONTADOR i ELE VAI PARA AS MEMORIAS SEGUINTES ACESSANDO O CONTEUDO
+    */
+  }
+}
+
+
