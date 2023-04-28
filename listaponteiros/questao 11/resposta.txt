@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float aloha[10], coisas[10][5], *pf, value = 2.2;
+    int i=3;
+    
+    aloha[2] = value; //OK
+    scanf("%f", &aloha); //tentando inserir valor aloha espera receber endereco
+    aloha = value; //nao esta apontado a posicao, se fosse ponteiro funcionava
+    printf("%f", aloha); //nao esta apontando a posicao do vetor aloha
+    coisas[4][4] = aloha[3]; //OK
+    coisas[5] = aloha; //se usa matriz matriz de linha
+    pf = value; //tem que indica o que pf apontara, se e o valor em um local ou endereco
+    pf = aloha; //nao esta indicando para onde esta apontando, POREM, ele esta apontando 
+    //ao fazer teste de execucao ele esta apontando para o valor na memoria. No caso,
+    //no caso o valor de aloha[0], como aloha[0] nao a valor ele esta apontando 0 em 
+    //outro endereco de memoria
+    return 0;
+}
+

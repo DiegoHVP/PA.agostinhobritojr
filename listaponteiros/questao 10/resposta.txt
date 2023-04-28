@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char charP[4];
+    int intP[4];
+    float floatP[4];
+    double doubleP[4];
+
+    std::cout << "Endereco de memoria charP [0] = " << (&charP) << endl;
+    std::cout << "Endereco de memoria intP [0] = " << (&intP) << endl;
+    std::cout << "Endereco de memoria floatP [0] = " << (&floatP) << endl;
+    std::cout << "Endereco de memoria doubleP [0] = " << (&doubleP) << "\n\n";
+    
+    for (int i = 1; i< 5; i++){
+        std::cout << "somando "<<i<<" em:"<< endl;
+        std::cout << "Endereco de memoria charP [" << i << "] = " << (&charP+i) << endl;
+        std::cout << "Endereco de memoria intP [" << i << "] = " << (&intP+i) << endl;
+        std::cout << "Endereco de memoria floatP [" << i << "] = " << (&floatP+i) << endl;
+        std::cout << "Endereco de memoria doubleP [" << i << "] = " << (&doubleP+i) << "\n\n";
+    }
+        
+    
+    cout << endl;
+    return 0;
+}
+
