@@ -1,0 +1,21 @@
+Os ponteiros sao uteis para aponta enderecos ou areas de memoria onde se encontra seu codigo.
+Por isso, podemos aproveitar para apontar onde uma funcao e armazenada, desde que ela tenha
+o mesmo tipo de retorn do ponteiro declarado. 
+
+Ex:
+
+#include <stdio.h>
+void f (int *n){ (*n)++ ;} 
+int main (){ 
+  void (*fponteiro) (int *) ;
+  fponteiro = f ;  // fponteiro aponta f
+  int a = 0 ;
+  
+  printf ("a vale %d\n", a) ;
+  
+  f(&a) ; //chama funcao normal
+  printf ("a vale %d\n", a) ;
+  
+  fponteiro(&a) ; // chama a funcao por ponteiro
+  printf ("a vale %d\n", a) ;
+}

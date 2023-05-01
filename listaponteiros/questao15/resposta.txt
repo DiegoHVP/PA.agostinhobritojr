@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+int compara(const void *a, const void *b){
+    int x = *(int*)a;
+    int y = *(int*)b;
+    return x - y;
+}
+
+int main(void){
+    int n, *numeros;
+    scanf("%i", &n);
+
+    numeros = (int*)malloc(n*sizeof(int));
+    for(int i = 0;i<n;i++)
+        scanf("%i",&numeros[i]);
+    qsort(numeros, n, sizeof(int), compara);
+    for(int i = 0;i<n;i++){
+            if(i!=n-1)
+                printf("%i, ",numeros[i]);
+            else
+                printf("%i", numeros[i]);
+}
+    free(numeros); // libera o espaco reservado em numeros
+
+    return 0;
+
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    float *numeros, aux; //cria ponteiro
+    scanf("%i", &n); //
+    numeros = (float*) malloc(n * sizeof(float)); //aloca n espacos de float no ponteiro
+    
+    for(int i = 0; i < n; i++)
+        scanf("%f", &numeros[i]); //ler n numeros float e armazena em numeros
+
+    for(int i = 0; i < n-1; i++) 
+        for(int j = i+1; j < n; j++)
+            if(numeros[i] > numeros[j]) { //pega o menor valor a frente de i no vetor numeros e troca com j
+                aux = numeros[i];
+                numeros[i] = numeros[j];
+                numeros[j] = aux;
+            }
+
+    for(int i = 0; i < n; i++) //exibir o vetor numeros
+        if(i!=n-1)
+            printf("%f, ", numeros[i]); //se nao for a ultima interacao exiba com virgula
+        else
+            printf("%f", numeros[i]);
+
+    free(numeros); // libera o espaco reservado em numeros
+
+    return 0;
+}
